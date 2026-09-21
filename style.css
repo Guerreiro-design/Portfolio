@@ -1,0 +1,744 @@
+:root{
+  --fundomodo: #111F39;
+  --text: #0794FF;
+  --text-principal: #ffffff;
+  --card-bg: #0d1b2a;
+  --text-sub: #8f9ba8;
+  --text-destaque: #00f0ff;
+  --animacao: #030E20;
+  --sb-track-color: #0794ff;
+  --sb-thumb-color: #111f39;
+  --sb-size: 14px;
+}
+
+.lightmode{
+  --animacao: #f8fafc;
+  --fundomodo: #e2e8f0;
+  --text: #000000;
+  --text-principal: #0f172a;
+  --card-bg: #ffffff;
+  --text-sub: #64748b;
+  --text-destaque: #0284c7;
+}
+
+.lightmode>ul>li>a{
+  color: var(--text);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+body{
+  font-family: "Cormorant Garamond", serif;
+  background-color: var(--animacao);
+  overflow-x: hidden;
+  color: var(--text-principal);
+}
+
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.AzulMarinho{
+  background-color: var(--fundomodo);
+  width: 100%;
+  padding: 12px 24px;
+}
+
+.Ulheader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Ulheader>li>a{
+  text-decoration: none;
+  color: var(--text);
+  font-size: 22px;
+  white-space: nowrap;
+}
+
+.DownloadCV>a{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+}
+
+.DownloadCV>a>img{
+  height: 20px;
+  width: 20px;
+}
+
+.MeuNome, .Sobre, .Competências, .ProjetosHeader, .Contato{
+  padding: 0;
+  margin: 0;
+}
+
+.DivInicio{
+  display: flex;
+  margin-top: 3.5%;
+  margin-left: 25%;
+}
+
+.H1-Primeiro{
+  color: var(--text);
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 65px;
+}
+
+.H1-Primeiro ~ p{
+  margin-bottom: 20px;
+}
+
+.P1{
+  font-size: 25px;
+}
+
+.titulo #P2 { 
+  overflow: hidden; 
+  border-right: .15em solid var(--fundomodo); 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 3.5s steps(20, end),
+    blink-caret .75s step-end infinite;
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--fundomodo); }
+}
+
+.Eu{
+  width: 244px;
+  height: 433px;
+}
+
+.titulo{
+  margin-left: 100px;
+}
+
+.titulo2-0{
+  width: 60%;
+  margin-bottom: 12.5px;
+}
+
+.Flexivel{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.Flexivel>img{
+  height: 20px;
+  width: auto;
+}
+
+.ContatosCor{
+  height: 45px;
+  display: inline-block;
+  border-radius: 12px;
+  font-size: 32px;
+  background-color: var(--fundomodo);
+}
+
+.ContatosCor>span{
+  margin-left: 35px;
+}
+
+.icone-email{
+  width: 24px;
+  height: auto;
+}
+
+.ContatosCor>a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.DivCorProjetos{
+  background-color: #0794FF;
+  height: 40px;
+  color: black;
+  display: inline-block;
+  border-radius: 8px;
+  font-size: 32px;
+}
+
+.DivCorProjetos>a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.SpanA{
+  margin-left: 20px;
+}
+
+.AbaixoTitulo{
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+.InfoBloco{
+  flex: 1;
+  background-color: var(--card-bg);
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  min-height: 120px;
+}
+
+.TituloRetangulistico{
+  color: var(--text-sub);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ConteudoRetangulistico{
+  color: var(--text-destaque);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.SecaoSobre{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  align-items: flex-start;
+}
+
+.SobreTexto{
+  flex: 1;
+}
+
+.TituloSobre{
+  font-size: 56px;
+  color: var(--text-destaque);
+  margin-bottom: 24px;
+  text-decoration: underline;
+}
+
+.P-Sobre{
+  font-size: 26px;
+  color: var(--text-principal);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.SobreCards{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.LinhaCards{
+  display: flex;
+  gap: 20px;
+}
+
+.CardExperiencia{
+  flex: 1;
+  background-color: var(--card-bg);
+  padding: 28px;
+  border-radius: 12px;
+}
+
+.CardHeader{
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-principal);
+  margin-bottom: 12px;
+}
+
+.CardExperiencia>p{
+  font-size: 18px;
+  color: var(--text-sub);
+  line-height: 1.4;
+}
+
+.CardObjetivos{
+  background-color: var(--card-bg);
+  padding: 28px;
+  border-radius: 12px;
+}
+
+.CardObjetivos>h3{
+  font-size: 24px;
+  color: var(--text-sub);
+  margin-bottom: 16px;
+}
+
+.CardObjetivos>ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.CardObjetivos>ul>li{
+  font-size: 18px;
+  color: var(--text-sub);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.CardObjetivos>ul>li>span{
+  color: var(--text-destaque);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.CardTopo{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.IconeCard{
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.CardExperiencia>.CardTopo>.CardHeader{
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-principal);
+}
+
+.Competencias{
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.TituloCompetencias{
+  font-size: 32px;
+  color: var(--text-principal);
+  font-weight: 500;
+}
+
+.SkillnePai{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.SubtituloHard{
+  font-size: 24px;
+  color: var(--text-sub);
+}
+
+.SubtituloSoft{
+  font-size: 24px;
+  color: var(--text-destaque);
+  margin-left: 120px;
+}
+
+.GridHardSkills{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.GridHardSkills>.CardSkill{
+  background-color: var(--card-bg);
+  padding: 20px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 120px;
+}
+
+.GridSoftSkills{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-left: 120px;
+  max-width: 750px;
+}
+
+.GridSoftSkills>.CardSkill{
+  background-color: var(--card-bg);
+  padding: 20px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 120px;
+}
+
+.CardSkill>span{
+  font-size: 16px;
+  color: var(--text-principal);
+}
+
+.CardSkill>img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.Projetos{
+  width: 90%;
+  max-width: 800px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.FalcoHeader{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.FalcoHeader>.TituloProjetos{
+  font-size: 32px;
+  color: var(--text-destaque);
+  font-weight: 500;
+}
+
+.FalcoHeader>.SubtituloProjetos{
+  font-size: 20px;
+  color: var(--text-sub);
+}
+
+.ListaProjetos{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ListaProjetos>.CardProjeto{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.CardProjeto>.ImgProjeto{
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.CardProjeto>.InfoProjeto{
+  flex: 1;
+  background-color: var(--card-bg);
+  padding: 20px 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.InfoProjeto>h3, .SubBlocoProjeto>h3{
+  font-size: 22px;
+  color: var(--text-destaque);
+  font-weight: 500;
+}
+
+.InfoProjeto>p, .SubBlocoProjeto>p{
+  font-size: 15px;
+  color: var(--text-destaque);
+  line-height: 1.4;
+}
+
+.InfoProjeto>.LinkProjeto{
+  align-self: flex-end;
+  color: var(--text-destaque);
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.InfoProjeto>.SubBlocoProjeto{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.InfoProjeto>.SubBlocoProjeto:not(:last-child){
+  margin-bottom: 12px;
+}
+
+/* Secao Contato com Bloco Card */
+.SecaoContato{
+  width: 90%;
+  max-width: 800px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.HeaderContato>h2{
+  font-size: 36px;
+  color: var(--text-destaque);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.HeaderContato>p{
+  font-size: 16px;
+  color: var(--text-destaque);
+  line-height: 1.4;
+}
+
+.BlocoContato{
+  background-color: var(--card-bg);
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.FormContato{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.LinhaInputs{
+  display: flex;
+  gap: 20px;
+}
+
+.CampoForm{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.CampoForm>label{
+  color: var(--text-principal);
+  font-size: 16px;
+}
+
+.CampoForm>input, .CampoForm>textarea{
+  background-color: var(--animacao);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 12px;
+  color: var(--text-principal);
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+.CampoForm>input:focus, .CampoForm>textarea:focus{
+  border-color: var(--text);
+}
+
+.BtnEnviar{
+  align-self: flex-start;
+  background-color: #0088ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  margin-top: 10px;
+}
+
+.BtnEnviar:hover{
+  opacity: 0.9;
+}
+
+.IconeEnviar{
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+/* Modo Claro/Escuro */
+#caixinha{
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border: solid 1px;
+  border-radius: 50px;
+  position: relative;
+}
+
+#bolinha>img{
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background-size: cover;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  transition: 0.5s;
+  background-image: var(--fundomodo);
+}
+
+#check:checked + #bolinha>img {
+  transform: translateX(26px);
+}
+
+#check{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+}
+
+/* Animação */
+#tech-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: var(--canvas); 
+}
+
+/* Responsividade Global */
+@media (max-width: 900px){
+  .Ulheader{
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .DivInicio{
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .titulo{
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .Flexivel{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .AbaixoTitulo{
+    flex-direction: column;
+  }
+
+  .SecaoSobre{
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .LinhaCards{
+    flex-direction: column;
+  }
+
+  .GridHardSkills{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .GridSoftSkills{
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 0;
+  }
+
+  .SubtituloSoft{
+    margin-left: 0;
+  }
+
+  .LinhaInputs{
+    flex-direction: column;
+  }
+
+  .CardProjeto{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .InfoProjeto>.LinkProjeto{
+    align-self: center;
+  }
+}
