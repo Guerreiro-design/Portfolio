@@ -128,6 +128,7 @@ checkbox.addEventListener("click", ()=>{
 function mascaraTel() {
     let tel = document.getElementById("Tel").value;
     document.getElementById("Tel").value = tel.slice(0, 21);
+    document.getElementById("Tel").value = tel.replace(/[^0-9()\-+ ]/g, '')
 
     if (tel[0] != "+") {
         if (tel[0] != undefined) {
@@ -164,7 +165,9 @@ function mascaraTel() {
             document.getElementById("Tel").value = tel.slice(0, 15) + "-" + tel[15];
         }
     }
+
 }
+
 
 function Resposta() {
     alert("Parabéns, sua mensagem foi enviada!");

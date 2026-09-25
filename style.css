@@ -632,6 +632,56 @@ header{
   height: 20px;
   filter: brightness(0) invert(1);
 }
+ /* Footer */
+footer {
+  background-color: var(--fundomodo);
+  width: 100%;
+  padding: 24px 0;
+  margin-top: 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ConteudoFooter {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TextoFooter {
+  color: var(--text-sub);
+  font-size: 18px;
+}
+
+.RedesSociais {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.RedesSociais > a > img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.RedesSociais > a > img:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.2);
+}
+
+/* Responsividade do Footer */
+@media (max-width: 900px) {
+  .ConteudoFooter {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
 
 /* Modo Claro/Escuro */
 #caixinha{
